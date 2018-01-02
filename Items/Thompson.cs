@@ -18,8 +18,8 @@ namespace ModernFirearms.Items
 		{
 			item.damage = 29;
 			item.ranged = true;
-			item.width = 56;
-			item.height = 23;
+			item.width = 64;
+			item.height = 24;
 			item.useTime = 5;
 			item.useAnimation = 5;
 			item.useStyle = 5;
@@ -58,7 +58,7 @@ namespace ModernFirearms.Items
 		
 		public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(-15, 4);
+			return new Vector2(-15, 2);
 		}
 		
 		

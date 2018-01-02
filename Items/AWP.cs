@@ -32,7 +32,7 @@ namespace ModernFirearms.Items
 			item.autoReuse = false;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 1.8f;
-			item.useAmmo = mod.ItemType("Bullet762");
+			item.useAmmo = mod.ItemType("Bullet762x51");
 		}
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)

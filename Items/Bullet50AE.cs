@@ -20,7 +20,7 @@ namespace ModernFirearms.Items
             item.ranged = true; 
             item.width = 32;
             item.height = 20;
-            item.maxStack = 60;
+            item.maxStack = 100;
             item.consumable = true; //Tells the game that this should be used up once fired
             item.knockBack = 1f; //Added with the weapon's knockback
             item.value = 500;

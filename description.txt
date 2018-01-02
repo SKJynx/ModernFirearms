@@ -1,1 +1,17 @@
 Modern firearms adds real world guns, and their real world ammo.
+
+v0.3.1.3 patch notes:
+
+Additions:
+- Added Beretta 92FS
+- Added AA-12
+- Added M1 Garand
+- Added PSG-1
+- Added MP5
+- Debug ammo crate
+
+Fixes:
+- 7.62x51 now has the correct naming scheme
+
+Tweaks
+- 

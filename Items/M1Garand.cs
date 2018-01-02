@@ -6,43 +6,43 @@ using System;
 
 namespace ModernFirearms.Items
 {
-	public class M24 : ModItem
+	public class M1Garand : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("M24");
-			Tooltip.SetDefault("M24 Sniper Weapon System, uses 7.62x51mm rounds.");
+			DisplayName.SetDefault("M1 Garand");
+			Tooltip.SetDefault("Uses .30-06 rounds.");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 310;
+			item.damage = 103;
 			item.ranged = true;
-			item.width = 64;
-			item.height = 20;
-			item.useTime = 110;
-			item.useAnimation = 110;
+			item.width = 69;
+			item.height = 18;
+			item.useTime = 21;
+			item.useAnimation = 21;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 7;
 			item.value = 10000;
 			item.rare = 2;
-			item.crit = 26;
-			item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/M24");
+			item.crit = 23;
+			item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/M1Garand");
 			item.autoReuse = false;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
-			item.shootSpeed = 2f;
-			item.useAmmo = mod.ItemType("Bullet762x51");	
+			item.shootSpeed = 2.4f;
+			item.useAmmo = mod.ItemType("Bullet3006");
 		}
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(1));
+			Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(2));
 			speedX = perturbedSpeed.X;
 			speedY = perturbedSpeed.Y;
 
-			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 80f;
-			if (Collision.CanHit(position, 00, 00, position + muzzleOffset, 00, 00))
+			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 60f;
+			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 			{
 				position += muzzleOffset;
 			}
@@ -58,7 +58,7 @@ namespace ModernFirearms.Items
 		
 		public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(-10, -4);
+			return new Vector2(-11, 0);
 		}
 		
 		// What if I wanted this gun to have a 38% chance not to consume ammo?
