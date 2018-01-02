@@ -1,3 +1,5 @@
 author = SKJynx
-version = 0.3.1.0
+version = 0.3.1.2
 displayName = Modern Firearms
+homepage = https://forums.terraria.org/index.php?threads/modern-firearms-mod.64986/
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, *.psd
